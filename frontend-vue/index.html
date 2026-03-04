@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <script>
+      (function() {
+        try {
+          const isDark = localStorage.getItem('isDark');
+          const shouldUseDarkTheme = isDark === 'true';
+
+          if (shouldUseDarkTheme) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          if (document.body) {
+            document.body.style.backgroundColor = shouldUseDarkTheme ? '#0f172a' : '#ffffff';
+          }
+        } catch (e) {
+          console.error('Failed to load theme:', e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

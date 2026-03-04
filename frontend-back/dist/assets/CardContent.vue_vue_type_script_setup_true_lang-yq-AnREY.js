@@ -1,0 +1,1 @@
+import{d as o,c as n,p as t,s as r,o as c}from"./index-Dy2rP4IQ.js";const m=o({__name:"CardContent",props:{class:{}},setup(s){const e=s;return(a,p)=>(c(),n("div",{class:t(["space-y-1.5 p-6",e.class])},[r(a.$slots,"default")],2))}});export{m as _};
